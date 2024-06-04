@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Finger+Paint:regular");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --orange: #F2C14E;
+    --black: #171717;
+    --winning-blocks: #6c6c6c;
+    --bg-color: #CCC;
+}
+
+body {
+    color: var(--black);
+    min-width: 100vh;
+    font-family: 'Finger Paint', cursive;
+}
+
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding-top: 80px;
+    align-items: center;
+    flex-direction: column;
+    background: var(--bg-color);
+
+}
+
+#gameboard {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.box {
+    height: 130px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    font-size: 120px;
+    border-right: 4px solid;
+    border-bottom: 4px solid;
+}
+
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+}
+
+button {
+    padding: 15px 20px;
+    border-radius: 4px;
+    background-color: var(--black);
+    color: #ccc;
+    border-color: var(--black);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.winner {
+    margin-top: 45px;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
